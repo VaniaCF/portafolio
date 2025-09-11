@@ -1,0 +1,251 @@
+:root {
+    --oscuro: #190019;
+    --purpuraProfundo: #2B124C;
+    --moradoOscuro: #522B5B;
+    --rosaMalva: #854F6C;
+    --rosaClaroCalido: #DFB6B2;
+    --tonoPiel: #FBE4D8;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--oscuro);
+    color: var(--tonoPiel);
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to bottom, var(--oscuro), var(--purpuraProfundo));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    width: 50px;
+}
+
+.logo-imagen {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: var(--tonoPiel);
+}
+
+/* Inicio */
+.inicio {
+    display: flex;
+    justify-content: space-between;
+    padding: 4.5rem 9rem;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--purpuraProfundo), var(--rosaMalva));
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
+.inicio-texto {
+    max-width: 600px;
+    text-align: left;
+    flex: 1;
+}
+
+.inicio-texto h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+    margin: 10px 0;
+    color: white;
+    font-weight: 900;
+    padding-left: 100px;
+}
+
+.inicio-texto p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    align-items: center;
+    padding: 100px 0 0 50px;
+    gap: 75px;
+}
+
+.boton {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: var(--purpuraProfundo);
+    color: var(--tonoPiel);
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.boton:hover {
+    background-color: var(--rosaClaroCalido);
+    color: var(--oscuro);
+}
+
+.inicio-presentacion {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.inicio-imagen {
+    max-width: 100%;
+    width: 350px;
+    border-radius: 50%;
+}
+
+.inicio-redes {
+    background-color: var(--tonoPiel);
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+
+.inicio-redes a {
+    color: white;
+    text-decoration: none;
+}
+
+/*sobre mi*/
+.sobre-mi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    background-color: var(--rosaClaroCalido);
+    color: var(--tonoPiel);
+    gap: 7rem;
+}
+
+.sobre-mi-texto {
+    max-width: 600px;
+    text-align: left;
+    color: var(--oscuro);
+}
+
+.sobre-mi-texto h2 {
+    font-size: 4rem;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+    font-weight: 900;
+    padding: 0;
+}
+
+.sobre-mi-texto label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--oscuro);
+    width: 100%;
+
+}
+
+.sobre-mi-texto-habilidades progress {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Colores barra llena */
+.sobre-mi-texto-habilidades progress::-webkit-progress-value {
+    background-color: #f44336;
+    border-radius: 10px;
+    appearance: none;
+}
+
+.sobre-mi-texto-habilidades progress::-moz-progress-bar {
+    background-color: #f44336;
+    border-radius: 10px;
+    appearance: auto;
+}
+
+.sobre-mi-imagen img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+}
+
+/*portafolio*/
+.portafolio {
+    padding: 4rem;
+    background: linear-gradient(to bottom, var(--oscuro), var(--purpuraProfundo));
+    color: var(--tonoPiel);
+}
+
+.portafolio h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.portafolio p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.carta {
+    background-color: var(--rosaMalva);
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carta img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: var(--oscuro);
+    color: var(--tonoPiel);
+    text-align: center;
+    padding: 3px;
+    position: relative;
+}
