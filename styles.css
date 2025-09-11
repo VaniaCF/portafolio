@@ -228,12 +228,19 @@ nav a {
 }
 
 .carta {
+    text-decoration: none; /* quita subrayado del enlace */
+    color: inherit;
     background-color: var(--rosaMalva);
     border-radius: 10px;
     padding: 20px;
     width: calc(33.333% - 20px);
     box-sizing: border-box;
     text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(.28,1.25,.58,1), 
+                box-shadow 0.4s ease, 
+                filter 0.4s ease;
 }
 
 .carta img {
@@ -248,4 +255,25 @@ footer {
     text-align: center;
     padding: 3px;
     position: relative;
+}
+/*animaciones tardias*/
+
+
+/* animación al pasar el mouse */
+.carta:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.3);
+    filter: brightness(1.1);
+}
+.animar {
+    opacity: 0;
+    transform: translateY(0);
+    animation: aparecer 0.8s ease forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(1);
+    }
 }
