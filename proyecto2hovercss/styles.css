@@ -1,89 +1,252 @@
+  /* ==================
+    ESTILOS GENERALES
+    ================== */
+:root {
+  --color-negro-suave: #0a0908;
+  --color-azul-gris: #22333b;
+  --color-blanco-humo: #f2f4f3;
+  --color-tierra-suave: #a9927d;
+  --color-madera-oscura: #5e503f;
+}
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 body {
-    display: block;
-    height: 100vh;
-    background-image: url(images/fondo.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: brightness(0.8);
-    font-family: Arial, sans-serif;
-}
-h1{
-    color: #e0e1dd;
-    text-align: center;
-    margin-top: 4rem;
-    animation: rebote 1s ease-out;
-    font-size: 3rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-@keyframes rebote {
-  0%   { transform: translateY(-100px); opacity: 0; }
-  50%  { transform: translateY(20px); opacity: 1; }
-  70%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  color: var(--color-blanco-humo);
+
+  background-image: url('images/fondo.jpeg');
+  background-repeat: repeat-y;           /* Repite solo en el eje Y */
+  background-position: center top;       /* Centra horizontalmente */
+  background-size: cover;                /* Ajusta la imagen al tamaño de la pantalla */
+  background-attachment: fixed;          /* Fija el fondo al scroll */
 }
 
-.card {
-  width: 250px;
-  height: 250px;
-  perspective: 1000px; /* permite el efecto 3D */
-  display: flex;
-  margin: 2rem;
-}
 
-.inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease;
-}
+  /* ==================
+    NAVBAR
+    ================== */
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#0d1b2a;
+    backdrop-filter: blur(8px);
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
 
-.card:hover .inner {
-  transform: rotateY(180deg);
-}
-
-.front, .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.front {
-  background: #778da9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #1b263b;
-}
-
-.front img {
-  width: 150px;
-  margin-bottom: 15px;
-}
-
-.back {
-  background: #e0e1dd;
-  color: #1b263b;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  text-align: center;
-}
-.target{
-    height: 25rem;
-    width: 70rem;
+  .navbar {
     display: flex;
-    margin: 6rem;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    color:#e0e1dd;
+    font-weight: bold;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .menu a {
+    color: var(--color-blanco-humo);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .menu a:hover {
+    color: #778da9;
+  }
+
+  /* ==================
+    HERO SECTION
+    ================== */
+  .hero {
+    height: 100vh;
+    display: flex;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding: 0 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: rebote 1s ease-out;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    background: #415a77;
+    color: var(--color-blanco-humo);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+  }
+
+  .btn:hover {
+    background: #e0e1dd;
+    color: var(--color-negro-suave);
+  }
+
+  /* ==================
+    PRESENTACION
+    ================== */
+  .presentacion {
+    padding: 10rem 2rem;
+    text-align: center;
+    color: var(--color-blanco-humo);
+  }
+
+  .presentacion h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .presentacion p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  /* ==================
+    PRODUCTOS
+    ================== */
+  .productos {
+    padding: 6rem 2rem;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+  }
+
+  .productos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .target {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
     border-radius: 15px;
-}
+    padding: 2rem;
+  }
+
+  /* TARJETAS CON ANIMACION */
+  .card {
+    width: 18rem;
+    height: 20rem;
+    perspective: 1000px;
+  }
+
+  .inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+  }
+
+  .card:hover .inner {
+    transform: rotateY(180deg);
+  }
+
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  .front {
+    background: #778da9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #1b263b;
+  }
+
+  .front img {
+    width: 150px;
+    margin-bottom: 15px;
+  }
+
+  .back {
+    background: #e0e1dd;
+    color: #1b263b;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* ==================
+    CONTACTO
+    ================== */
+  .contacto {
+    padding: 6rem 2rem;
+    text-align: center;
+    color: var(--color-blanco-humo);
+  }
+
+  .contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contacto p {
+    font-size: 1.2rem;
+  }
+
+  /* ==================
+    FOOTER
+    ================== */
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+  }
+
+  /* ==================
+    ANIMACIONES
+    ================== */
+  @keyframes rebote {
+    0%   { transform: translateY(-100px); opacity: 0; }
+    50%  { transform: translateY(20px); opacity: 1; }
+    70%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }

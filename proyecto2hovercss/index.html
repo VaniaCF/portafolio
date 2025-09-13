@@ -1,53 +1,99 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto con Efecto Hover</title>
+    <title>Mi Tienda Cool</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Productos Destacados</h1>
-    <div class="target">
-        <div class="card">
-            <div class="inner">
-                <div class="front">
-                    <img src="images/zapatilla1.png" alt="Producto">
-                    <h2>Producto Cool</h2>
-                </div>
-                <div class="back">
-                    <h3>Precio: $49.99</h3>
-                    <p>Detalles rápidos del producto. ✨</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="inner">
-                <div class="front">
-                    <img src="images/zapatilla1.png" alt="Producto">
-                    <h2>Producto Cool</h2>
-                </div>
-                <div class="back">
-                    <h3>Precio: $49.99</h3>
-                    <p>Detalles rápidos del producto. ✨</p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="inner">
-                <div class="front">
-                    <img src="images/zapatilla1.png" alt="Producto">
-                    <h2>Producto Cool</h2>
-                </div>
-                <div class="back">
-                    <h3>Precio: $49.99</h3>
-                    <p>Detalles rápidos del producto. ✨</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    </head>
+    <body>
     
+    <!-- Menú de navegación -->
+    <header>
+        <nav class="navbar">
+        <h1 class="logo">MiTienda</h1>
+        <ul class="menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#presentacion">Presentación</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        </nav>
+    </header>
 
-</body>
-</html>
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+        <h2>Bienvenido a Mi Tienda</h2>
+        <p>Descubre nuestros productos con animaciones modernas y diseño atractivo ✨</p>
+        <a href="#productos" class="btn">Ver Productos</a>
+        </div>
+    </section>
+
+    <!-- Presentación -->
+    <section id="presentacion" class="presentacion">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos una tienda online dedicada a ofrecerte productos con estilo, diseño y calidad.</p>
+    </section>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="productos">
+        <h2>Zapatillas</h2>
+        <div class="target">
+        
+        <div class="card">
+            <div class="inner">
+            <div class="front">
+                <img src="images/zapatilla1.png" alt="Producto">
+                <h2>zapatilla1</h2>
+            </div>
+            <div class="back">
+                <h3>Precio: $49.99</h3>
+                <p>Detalles rápidos del producto. ✨</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="inner">
+            <div class="front">
+                <img src="images/zapatilla1.png" alt="Producto">
+                <h2>zapatilla2</h2>
+            </div>
+            <div class="back">
+                <h3>Precio: $49.99</h3>
+                <p>Detalles rápidos del producto. ✨</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="inner">
+            <div class="front">
+                <img src="images/zapatilla1.png" alt="Producto">
+                <h2>zapatilla3</h2>
+            </div>
+            <div class="back">
+                <h3>Precio: $49.99</h3>
+                <p>Detalles rápidos del producto. ✨</p>
+            </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <p>Correo: contacto@mitienda.com</p>
+        <p>Teléfono: +591 70000000</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MiTienda - Todos los derechos reservados.</p>
+    </footer>
+
+    </body>
+    </html>
