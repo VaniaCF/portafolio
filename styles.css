@@ -241,6 +241,7 @@ nav a {
     transition: transform 0.4s cubic-bezier(.28,1.25,.58,1), 
                 box-shadow 0.4s ease, 
                 filter 0.4s ease;
+    height: 20rem;
 }
 
 .carta img {
